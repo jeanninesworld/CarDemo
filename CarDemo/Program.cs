@@ -19,7 +19,7 @@ namespace CarDemo
             truck.Drive();
             truck.Park();
 
-            //van
+            //van 
             Van van = new Van("Nissan", "AgileThoughtVan", "Blue", "2019", "Normal Van");
             Console.WriteLine("Vehicle Type:" + van.Type);
             Console.WriteLine("Vehicle Make:" + van.Make);
