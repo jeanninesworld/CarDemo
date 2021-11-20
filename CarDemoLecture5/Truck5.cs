@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CarDemo5
+namespace CarDemoLecture5
 {
     public class Truck5 : Vehicle5
     {

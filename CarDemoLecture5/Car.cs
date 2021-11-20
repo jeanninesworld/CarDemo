@@ -6,52 +6,23 @@ using System.Threading.Tasks;
 
 namespace CarDemoLecture5
 {
-    public class Vehicle5
+    public class Car : IVehicle
     {
-        //define properties, underscore indicates these fields belong to the actual class
         private string _make, _model, _color, _year, _price, _type;
-
-        //constructor for the class
-        public Vehicle5(string make, string model, string color, string year)
+        public Car(string make, string model, string color, string year) 
         {
             Make = make;
             Model = model;
             Color = color;
             Year = year;
+
         }
 
-        //example of overloading the constructor
-        public Vehicle5(string make, string model, string color, string year, string type)
-        {
-            Make = make;
-            Model = model;
-            Color = color;
-            Year = year;
-            Type = type;
-        }
-
-        public void Start()
-        {
-            Console.WriteLine($"Starting the {Type}.....");
-            Console.WriteLine("Started.....");
-        }
-
-        public void Drive()
-        {
-            Console.WriteLine($"Driving the {Type}.....");
-        }
-
-        public void Park()
-        {
-            Console.WriteLine($"{Type}Parked....");
-        }
-
-        //create properties
         public String Make
         {
             get
-            { 
-                return _make; 
+            {
+                return _make;
             }
             set
             {
@@ -112,6 +83,25 @@ namespace CarDemoLecture5
             {
                 _type = value;
             }
+        }
+
+        public void Drive()
+        {
+            Console.WriteLine("Driving car....");
+            Console.WriteLine("Still Driving...");
+            Console.WriteLine("...............");
+        }
+
+        public void Park()
+        {
+            Console.WriteLine("Parking car....");
+            Console.WriteLine("");
+        }
+
+        public void Start()
+        {
+            Console.WriteLine("Starting car....");
+            Console.WriteLine("Car Started...");
         }
     }
 }
